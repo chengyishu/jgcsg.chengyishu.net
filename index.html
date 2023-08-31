@@ -1,0 +1,1362 @@
+<!doctype html>
+<html style='font-size:18px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+/*快速自定义配置*/
+:root {
+    --monospace: "JetBrains Mono", "Fira Code", "Cascadia Code", Menlo, "Ubuntu Mono", Consolas, HYZhengYuan; /*代码字体*/
+    --text-font: var(--monospace); /*正文字体*/
+    --title-font: var(--monospace); /*标题字体*/
+    --latex-font: var(--monospace); /*LaTeX字体(不含英语)*/
+    --text-line-height: 1.6; /*正文行间距*/
+    --code-line-height: 1.6; /*代码块行间距*/
+    --p-spacing: 0.8rem; /*段间距*/
+    --text-size: 12px;
+}/*
+ * Copyright (C) 2018 Drake, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * GitHub https://github.com/liangjingkanji/DrakeTyporaTheme
+ */
+@import url();
+@include-when-export url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --text-color: #202124;
+    --blur-text-color: #c8c8c8;
+    --bg-color: #ffffff;
+    --control-text-color: var(--text-color);
+    --meta-content-color: var(--text-color);
+    --active-file-border-color: var(--drake-accent);
+    --rawblock-edit-panel-bd: var(--code-block-bg-color);
+    --item-hover-bg-color: #E5E5E596;
+    --active-file-bg-color: var(--item-hover-bg-color);
+
+    --blur-text-color: rgba(32, 33, 36, 0.5);
+    --drake-accent: #5784ec;
+    --drake-highlight: #3a474e;
+    --a-color: #1769e0;
+    --variable-color: #d01884;
+    --outline-active-color: var(--a-color);
+    --code-block-bg-color: #f8f9fa;
+    --code-block-color: #3a474e;
+    --title-color: #202124;
+    --blockquote-border-color: #275796;
+    --blockquote-color: #275796;
+    --blockquote-bg-color: #e5f4fd;
+    --strong-color: var(--title-color);
+    --h2-underline-color: var(--title-color);
+    --horizontal-divider-color: var(--title-color);
+    --height-light-color: var(--text-color);
+    --height-light-border-color: var(--text-color);
+    --yaml-color: #777777;
+    --yaml-bg-color: #f7f7f7;
+    --footnotes-bg-color: #3c3d3e;
+    --footnotes-highlight: #FFD760;
+    --table-border-color: #dadce0;
+    --table-header-bg-color: #f1f3f4;
+    --table-bg-color: var(--bg-color);
+    --table-n2-bg-color: var(--bg-color);
+    --input-bg-color: var(--item-hover-bg-color);
+    --btn-hover-bg-color: var(--item-hover-bg-color);
+    --checkbox-checked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M425.984 726.016l384-384-59.99-61.995-324.01 324.011-152.021-152.021L213.973 512zm384-598.016q36.01 0 61.013 25.984T896 213.974v596.01q0 34.005-25.003 59.99t-61.013 25.983h-596.01q-36.011 0-61.014-25.984t-25.003-59.989v-596.01q0-34.006 25.003-59.99T213.973 128h596.011z' fill='%2365b73b'/%3E%3C/svg%3E");
+    --checkbox-unchecked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M810.667 213.333v597.334H213.333V213.333h597.334m0-85.333H213.333C166.4 128 128 166.4 128 213.333v597.334C128 857.6 166.4 896 213.333 896h597.334C857.6 896 896 857.6 896 810.667V213.333C896 166.4 857.6 128 810.667 128z' fill='%23333333'/%3E%3C/svg%3E");
+}
+
+html {
+    font-size: var(--text-size);
+}
+
+body {
+    font-family: var(--text-font) !important;
+    color: var(--text-color);
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p {
+    line-height: var(--text-line-height);
+}
+
+/*code block*/
+.md-fences {
+    font-size: 1rem;
+    padding: 12px !important;
+    border-radius: 8px;
+    word-wrap: normal;
+    background-color: var(--code-block-bg-color);
+    color: var(--code-block-color);
+    border: .1em solid #e8eaed;
+    line-height: var(--code-line-height);
+}
+
+/*inline latex*/
+.MathJax {
+    font-size: 120% !important;
+}
+.MathJax text, .MathJax use {
+    font-family: var(--latex-font);
+}
+/*math-block latex*/
+.md-math-block .MathJax {
+    font-size: 130% !important;
+}
+
+/*mermaid*/
+[mermaid-type="journey"] line {
+    stroke: #7a7a7a !important;
+}
+[mermaid-type="journey"] .label {
+    color: #333 !important;
+}
+[id^=mermaidChart] .relationshipLabelBox {
+    fill: var(--bg-color) !important;
+    opacity: 1 !important;
+    background-color: var(--bg-color) !important;
+}
+[id^=mermaidChart] .legend {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] g.label {
+    font-size: 1rem !important;
+}
+[id^=mermaidChart] line.divider {
+    stroke: var(--table-border-color) !important;
+}
+[id^=mermaidChart] span.nodeLabel {
+    color: var(--code-block-color) !important;
+    line-height: 1.8rem;
+}
+tspan {
+    color: var(--text-color)
+}
+[id^=mermaidChart] .entityLabel {
+    fill: var(--code-block-color) !important;
+}
+[id^=mermaidChart] {
+    fill: var(--text-color) !important;
+}
+[id^=mermaidChart] rect.rect {
+    fill: rgba(175, 255, 212, 0.3) !important;
+}
+.md-diagram-panel-preview text.actor > tspan { /*方块文字*/
+    fill: var(--code-block-color) !important;
+    stroke: none !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .actor, .md-diagram-panel-preview .entityBox { /*方块*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .actor-line { /*竖线*/
+    stroke: var(--text-color) !important;
+    stroke-width: 1px;
+}
+.md-diagram-panel-preview .messageLine0 { /*横线*/
+    stroke-width: 1.5;
+    stroke-dasharray: none;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageLine1 { /*虚线*/
+    stroke-width: 1.5 !important;
+    stroke-dasharray: 2, 2 !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageText { /*描述文字*/
+    fill: var(--text-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .activation0 { /*长方形*/
+    fill: #e6e6e6 !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .labelText, .md-diagram-panel-preview .labelText > tspan { /*循环标记*/
+    fill: var(--code-block-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+    dominant-baseline: unset;
+    alignment-baseline: unset;
+}
+.md-diagram-panel-preview .labelBox { /*循环标记背景*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .loopLine { /*循环标记虚线*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .loopText, .md-diagram-panel-preview .loopText > tspan { /*循环名称*/
+    fill: var(--text-color) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .sequenceNumber { /*序号*/
+    fill: var(--bg-color) !important;
+}
+pre.md-fences-advanced.md-focus .md-fences-adv-panel {
+    border: none;
+}
+.md-diagram-panel-preview .edgePath .path { /*箭头*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel rect { /*条件文字背景*/
+    fill: var(--bg-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel span { /*条件文字*/
+    color: var(--text-color);
+}
+.md-diagram-panel-preview .node rect,
+.md-diagram-panel-preview .node circle,
+.md-diagram-panel-preview .node ellipse,
+.md-diagram-panel-preview .node polygon,
+.md-diagram-panel-preview .node path { /*形状*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+#write .md-diagram-panel .md-diagram-panel-preview div { /*形状内文字*/
+    color: var(--code-block-color);
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+
+/*code snippet*/
+#write code, tt {
+    margin: 0 4px;
+    color: var(--drake-highlight);
+    border: .1rem solid #e8eaed;
+    background: #f8f9fa;
+    border-radius: 4px;
+    padding: .1rem .4rem;
+}
+
+/*variable*/
+var {
+    color: var(--variable-color);
+    font-weight: bold;
+}
+
+/*raw block*/
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    border-radius: 2px 0 2px 2px;
+    padding: 0.2rem !important;
+}
+.md-rawblock:hover > .md-rawblock-container {
+    background: none;
+}
+.md-rawblock-input {
+    font-size: 1rem;
+}
+.md-rawblock-tooltip-btn:hover {
+    background: none;
+}
+.md-rawblock:hover > .md-rawblock-tooltip {
+    border-radius: 2px 2px 0 0;
+    margin-bottom: 2px !important;
+}
+.md-rawblock-tooltip.md-rawblock-control {
+    border-radius: 2px 2px 0 0;
+    color: var(--code-block-color);
+}
+.md-rawblock-tooltip-name {
+    color: var(--code-block-color);
+    opacity: 1;
+}
+
+/*quote block*/
+blockquote {
+    color: var(--blockquote-color) !important;
+    border-radius: 4px;
+    padding: 10px 16px;
+    background-color: var(--blockquote-bg-color);
+    position: relative;
+    border-left: none;
+}
+
+#write strong {
+    color: var(--strong-color);
+    font-weight: bold;
+}
+#write blockquote strong {
+    color: var(--blockquote-color);
+}
+
+/*link*/
+.on-focus-mode #write a .md-plain:hover, .on-focus-mode .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--blur-text-color);
+}
+#write a .md-plain:hover, .md-htmlblock-container a:hover,
+.on-focus-mode #write .md-focus a .md-plain:hover, .on-focus-mode .md-focus .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--a-color);
+}
+#write a {
+    color: var(--a-color);
+    text-decoration: none;
+}
+#write h2 a .md-plain {
+    border-bottom: .2rem solid var(--a-color);
+}
+[md-inline=link] a {
+    margin: 0 .2rem;
+}
+#write a code, a:any-link {
+    color: var(--a-color);
+}
+#write a code:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 0.1em;
+}
+
+img {
+    border-left: none;
+    border-right: none;
+    vertical-align: baseline;
+    border-radius: 2px;
+}
+
+#write {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+#typora-source .CodeMirror-lines {
+    max-width: 1200px;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+    color: var(--title-color);
+}
+
+h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
+    visibility: hidden;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.on-focus-mode h2.md-end-block.md-heading:not(.md-focus):not(.md-focus-container):after {
+    background-color: var(--blur-text-color) !important;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+p, blockquote, ul, ol, dl, table {
+    margin: var(--p-spacing) 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+li {
+    margin: 0.5em 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: var(--horizontal-divider-color);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul, ol {
+    padding-inline-start: 2em;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+.ty-table-edit {
+    margin-top: -1rem !important;
+}
+#write table {
+    margin-top: 1rem;
+    word-break: initial;
+    background-color: var(--table-bg-color);
+}
+table tr {
+    border-top: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 0;
+}
+table th {
+    font-weight: bold;
+    border: .1em solid var(--table-border-color);
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 6px 13px;
+}
+table thead {
+    background-color: var(--table-header-bg-color);
+}
+table tr:nth-child(2n) {
+    background-color: var(--table-n2-bg-color);
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: var(--table-header-bg-color);
+}
+
+/* height light */
+#write mark {
+    border: .1em solid var(--height-light-border-color);
+    color: var(--height-light-color);
+    background-color: transparent;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    margin: 0 .2rem;
+    font-size: .95rem;
+}
+
+/*shortcut*/
+kbd {
+    border: .1em solid #5b5b5e;
+    background: transparent;
+    color: var(--text-color);
+    margin: 0 .4rem;
+    font-family: var(--text-font) !important;
+    font-size: .95rem;
+    padding: .3em .4em;
+    border-radius: .4em;
+    box-shadow: .1em .1em .2em rgba(0, 0, 0, 0.3);
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 12px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+/*YAML*/
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.45;
+    background-color: var(--yaml-bg-color);
+    border: 0;
+    border-radius: 2px;
+    color: var(--yaml-color);
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 2px;
+    font-family: initial;
+    padding: 2px 0 0 4px;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.typora-quick-open-item {
+    font-size: 1rem !important;
+    height: 50px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#typora-quick-open {
+    box-shadow: 0 0 8px #00000045;
+    padding: 0;
+}
+
+.ty-quick-open-category.ty-has-prev .ty-quick-open-category-title {
+    border-top: none;
+}
+
+#typora-quick-open-input {
+    margin: 8px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+#typora-quick-open-input input {
+    font-size: 1rem;
+    box-shadow: none;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 32px;
+    max-height: 32px;
+    border: none;
+}
+
+.modal-dialog#typora-quick-open {
+    border-radius: 8px;
+}
+
+.ty-quick-open-category-title {
+    padding-left: 8px;
+    color: #BEBEBE;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.typora-quick-open-item-path {
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 1px;
+}
+
+/*search input*/
+.form-control {
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+#md-searchpanel .btn {
+    border-radius: 2px;
+}
+
+#search-panel-replaceall-btn {
+    padding-right: 5px !important;
+    text-align: center !important;
+}
+
+#search-panel-replace-btn {
+    text-align: center !important;
+}
+
+#md-searchpanel input {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+.searchpanel-search-option-btn {
+    border-radius: 2px;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.searchpanel-search-option-btn.active {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: initial;
+}
+
+/*sidebar*/
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+.file-node-content {
+    display: flex;
+    align-items: center;
+}
+.file-node-open-state {
+    margin-right: .5rem;
+}
+.file-node-icon {
+    margin-right: .5rem;
+}
+
+#typora-sidebar {
+    font-size: inherit;
+    font-family: var(--title-font);
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+.file-list-item-summary, .file-list-item-parent-loc, .file-list-item-time, .file-list-item-summary {
+    font-size: 0.9rem !important;
+    font-family: var(--text-font);
+}
+
+.file-list-item-file-ext-part {
+    display: none;
+}
+
+.outline-item {
+    font-size: 1rem;
+}
+
+/*footnotes mark*/
+#write .md-footnote {
+    background-color: inherit;
+    color: var(--drake-highlight);
+    font-size: 0.9rem;
+    border-radius: 0.9rem;
+    padding-left: 0;
+}
+
+#write .md-footnote:before {
+    content: "[";
+}
+
+#write .md-footnote:after {
+    content: "]";
+}
+
+/*footnotes content*/
+.md-hover-tip .code-tooltip-content {
+    border-radius: 2px;
+}
+
+/*footnotes title*/
+span.md-def-name {
+    padding-right: 3ch;
+    padding-left: 0;
+    position: relative;
+    font-weight: normal;
+}
+
+/*footnotes desc*/
+.footnotes {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-color);
+    position: relative;
+}
+
+/*footnotes tooltip text*/
+.code-tooltip-content .md-plain {
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.code-tooltip-content code {
+    padding: 0 2px;
+    font-family: inherit;
+    color: var(--footnotes-highlight);
+    background-color: inherit;
+}
+
+.code-tooltip-content a {
+    color: var(--footnotes-highlight);
+}
+
+div.code-tooltip-content {
+    box-shadow: 0 0 8px #00000045;
+    background: var(--footnotes-bg-color);
+}
+
+.footnotes {
+    opacity: 1;
+}
+
+.md-def-name:after {
+    content: ". ^";
+    color: var(--text-color);
+}
+
+.md-def-footnote .md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-content.md-url, .md-def-content.md-def-url.md-auto-disp {
+    text-decoration: none;
+    border-bottom: .1rem solid var(--text-color);
+}
+
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.file-list-item-summary {
+    font-size: 1em;
+}
+
+.pin-outline #outline-content .outline-active strong, .pin-outline .outline-active {
+    font-weight: 500;
+    color: var(--outline-active-color);
+}
+
+.file-list-item.active {
+    border-left: 4px solid var(--drake-accent);
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+    background: var(--btn-hover-bg-color);
+}
+
+/*checkbox*/
+#write input[type=checkbox] {
+    opacity: 0;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+    margin-top: 0;
+    top: 0;
+}
+
+#write .ul-list li.md-task-list-item.task-list-done::before {
+    content: "";
+    background: var(--checkbox-checked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+#write .ul-list li.md-task-list-item.task-list-not-done::before {
+    content: "";
+    background: var(--checkbox-unchecked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+.task-list-item p {
+    line-height: 1.6rem;
+}
+
+/*insert table*/
+.btn {
+    border-radius: 2px;
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--drake-highlight);
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--drake-highlight);
+}
+
+.btn-default {
+    background-color: transparent;
+}
+
+.btn:active {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+#table-insert-col, #table-insert-row {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+/*preference panel*/
+#megamenu-content {
+    background-image: none !important;
+    background-color: var(--bg-color);
+}
+#top-titlebar {
+    height: inherit;
+    background-color: var(--bg-color);
+}
+#megamenu-menu-sidebar {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.long-btn {
+    width: inherit;
+    min-width: 300px;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+}
+.megamenu-menu-panel h1 {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+.megamenu-menu-panel h1, .megamenu-menu-panel h2 {
+    font-weight: normal;
+}
+#recent-file-panel-search-input {
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    padding-left: 8px;
+}
+#recent-file-panel-search-input::placeholder {
+    color: var(--text-color);
+    opacity: .5;
+}
+.megamenu-menu-header {
+    border-bottom: none;
+}
+#recent-file-panel-action-btn {
+    background: none;
+    border: none;
+}
+#recent-file-panel-action-btn-container {
+    float: none;
+    display: inline-block;
+}
+#top-titlebar .toolbar-icon.btn.hover, #top-titlebar .toolbar-icon.btn:hover {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--text-color);
+}
+.megamenu-menu-panel .btn:hover {
+    background-color: var(--btn-hover-bg-color) !important;
+    color: var(--text-color);
+}
+#recent-file-panel tbody tr:nth-child(2n-1),
+.megamenu-menu-panel table thead,
+.megamenu-menu-panel table tr {
+    background-color: transparent;
+}
+.megamenu-menu-panel table {
+    font-weight: normal;
+}
+#megamenu-back-btn {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+}
+header, .context-menu, .megamenu-content, footer {
+    font-family: var(--text-font);
+}
+.ty-preferences select {
+    padding-left: 2px;
+}
+.preference-item-hint {
+    font-size: 14px;
+}
+a.ty-link {
+    color: var(--a-color);
+    margin: 0 .2rem;
+}
+
+/**
+    code render
+    Name: IntelliJ IDEA light theme
+    From IntelliJ IDEA by JetBrains
+ */
+.cm-s-inner.CodeMirror {
+    background: none;
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-number {
+    color: #c5221f;
+}
+.cm-s-inner span.cm-atom {
+    color: #c5221f;
+}
+.cm-s-inner span.cm-def {
+    color: #00f;
+}
+.cm-s-inner span.cm-variable {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-variable-2 {
+    color: #00627A;
+}
+.cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type {
+    color: #9334e6;
+}
+.cm-s-inner span.cm-property {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-keyword {
+    color: #1967d2;
+}
+.cm-s-inner span.cm-operator {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-comment {
+    color: #b80672;
+}
+.cm-s-inner span.cm-string {
+    color: #008000;
+}
+.cm-s-inner span.cm-string-2 {
+    color: #008000;
+}
+.cm-s-inner span.cm-qualifier {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-error {
+    color: red;
+}
+.cm-s-inner span.cm-attribute {
+    color: #9334e6;
+}
+.cm-s-inner span.cm-tag.cm-bracket {
+    color: #1967d2;
+}
+.cm-s-inner span.cm-link {
+    color: #4A86E8;
+}
+.cm-s-inner span.cm-builtin {
+    color: var(--code-block-color);
+}
+.cm-s-inner .cm-meta {
+    color: #c5221f;
+}
+.cm-s-inner .CodeMirror-gutters {
+    border-right: 1px solid rgba(120, 120, 120, 0.3);
+    background: var(--code-block-bg-color);
+}
+.cm-s-inner .CodeMirror-linenumber {
+    color: #787878;
+}
+
+
+</style><title>金刚长寿功</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><p>&nbsp;</p><h1 id='金刚长寿功'><span>金刚长寿功</span></h1><p>&nbsp;</p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n2"><a class="md-toc-inner" href="#金刚长寿功">金刚长寿功</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n10"><a class="md-toc-inner" href="#一八部金刚功日练·阳法）">一、八部金刚功（日练·阳法）</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n17"><a class="md-toc-inner" href="#起式">起式</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n23"><a class="md-toc-inner" href="#第一部双手插顶利三焦">第一部：双手插顶利三焦</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n34"><a class="md-toc-inner" href="#第二部手足前后固肾腰">第二部：手足前后固肾腰</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n50"><a class="md-toc-inner" href="#第三部调理脾肤需单举">第三部：调理脾肤需单举</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n60"><a class="md-toc-inner" href="#第四部左肝右肺如射雕">第四部：左肝右肺如射雕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n81"><a class="md-toc-inner" href="#第五部回头望足去心疾">第五部：回头望足去心疾</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n94"><a class="md-toc-inner" href="#第六部五劳七伤向后瞧">第六部：五劳七伤向后瞧</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n104"><a class="md-toc-inner" href="#第七部凤凰展翅周身力">第七部：凤凰展翅周身力</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n123"><a class="md-toc-inner" href="#第八部两足顿顿饮嗜消">第八部：两足顿顿饮嗜消</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n130"><a class="md-toc-inner" href="#收功">收功</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n199"><a class="md-toc-inner" href="#二八部长寿功月练·阴法）">二、八部长寿功（月练·阴法）</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n206"><a class="md-toc-inner" href="#第一部窃吃昆仑长生酒">第一部：窃吃昆仑长生酒</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n209"><a class="md-toc-inner" href="#第二部升降日月任督走">第二部：升降日月任督走</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n218"><a class="md-toc-inner" href="#第三部内转太极行八卦">第三部：内转太极行八卦</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n240"><a class="md-toc-inner" href="#第四部大转逍遥乐无忧">第四部：大转逍遥乐无忧</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n249"><a class="md-toc-inner" href="#第五部大雁腾空降吉祥">第五部：大雁腾空降吉祥</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n258"><a class="md-toc-inner" href="#第六部浪里行舟漂海洋">第六部：浪里行舟漂海洋</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n266"><a class="md-toc-inner" href="#第七部白鹤踏波定神思">第七部：白鹤踏波定神思</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n271"><a class="md-toc-inner" href="#第八部鱼沉海底寿命长">第八部：鱼沉海底寿命长</a></span></p></div><p><span>由招熟而渐悟懂劲，由懂劲而阶及神明。</span></p><p><span>式之所动，劲之所生，欲右而先左，欲紧而先松，反而后动，灭而后生。</span></p><p><span>气息收发，随劲行止，无意则中，清静则归，关心则乱，必固则失。</span></p><p><span>明此要诀，以习神功。</span></p><p>&nbsp;</p><h2 id='一八部金刚功日练·阳法）'><span>一、八部金刚功</span><small><span>（日练·阳法）</span></small></h2><blockquote><p><strong><span>双手插顶利三焦</span></strong><span>，</span><strong><span>手足前后固肾腰</span></strong><span>。</span></p><p><strong><span>调理脾肤需单举</span></strong><span>，</span><strong><span>左肝右肺如射雕</span></strong><span>。</span></p><p><strong><span>回头望足去心疾</span></strong><span>，</span><strong><span>五劳七伤往后瞧</span></strong><span>。</span></p><p><strong><span>凤凰展翅周身力</span></strong><span>，</span><strong><span>两足顿顿饮嗜消</span></strong><span>。</span></p><p><small><span>（顺序：三焦、水、土、木、金、火，扫除五劳七伤，畅通周身经血，促进积食消化）</span></small></p></blockquote><h3 id='起式'><span>起式</span></h3><p><span>两脚开立，双手落于体侧。</span></p><p><span>双手绷劲后拧一次。</span></p><p><span>双手绷劲后拧两次。</span></p><p><span>双手绷劲后拧三次。</span></p><p><span>双手上提，气归中宫。</span></p><h3 id='第一部双手插顶利三焦'><span>第一部：双手插顶利三焦</span></h3><p><span>双手下放。</span></p><p><span>体侧伸平。</span></p><p><span>立掌。</span></p><p><span>向上会和于头顶。</span></p><p><span>并掌。</span></p><p><span>冲天。</span></p><p><span>落掌放平。</span></p><p><span>勾掌。</span></p><p><span>气归中宫。</span></p><p><span>x9。</span></p><h3 id='第二部手足前后固肾腰'><span>第二部：手足前后固肾腰</span></h3><p><span>合掌左进开脚。</span></p><p><span>前冲。</span></p><p><span>分开。</span></p><p><span>弓步落后。</span></p><p><span>掌根合拢，合掌上提。</span></p><p><span>隔空下推。</span></p><p><span>伸平起身。</span></p><p><span>合掌收回。</span></p><p><span>换向。</span></p><p><span>x9。</span></p><p><span>方拳收脚，气归中宫。</span></p><blockquote><p><span>“合掌上提”这一步并不简单，他不是靠寸劲冲上去，而是靠内劲涌上去的。</span></p><p><span>同时，标准动作要求在上提过程中，始终保持掌根合拢，这个动作很像瑜伽中的双手背后合十式，只是金刚功的合掌动作指尖向下，瑜伽是指尖向上。</span></p><p><span>平时可以尝试利用座椅靠背、墙壁等借助外力，或用向后猛拍掌上提的寸劲将掌根于背后合拢紧贴后背，挺胸抬头，利用衣服的摩擦力卡住坚持一小会儿，假以时日，必有成就。</span></p></blockquote><h3 id='第三部调理脾肤需单举'><span>第三部：调理脾肤需单举</span></h3><p><span>左开大步。</span></p><p><span>拳移左腰，左立拳如招财之猫，右平拳如覆食之碗。</span></p><p><span>开拳换掌，侧方脚跟向后外旋拧成平行站位，弓步上举下按。</span></p><p><span>内旋翻手，方拳回收。</span></p><p><span>拳移右腰，右立拳如招财之猫，左平拳如覆食之碗。</span></p><p><span>x9。</span></p><p><span>方拳收脚，气归中宫。</span></p><blockquote><p><span>“弓步上举下按”这一步的“步法”很重要！它是上举下按的同时，侧方脚以脚尖为轴、脚跟向后向外旋，将双脚从开始的外八站位调整为平行站位，然后弓步上举下按，行气才能通达顺畅。</span></p></blockquote><h3 id='第四部左肝右肺如射雕'><span>第四部：左肝右肺如射雕</span></h3><p><span>左开大步。</span></p><p><span>双拳向左出掌伸平。</span></p><p><span>反向轮转上过头顶。</span></p><p><span>一次触底。</span></p><p><span>二次触底收拳。</span></p><p><span>左倾身体右压拳，内旋翻掌上经面。</span></p><p><span>逆向轮转，绕体推出。</span></p><p><span>起身搭箭。</span></p><p><span>拉弓。</span></p><p><span>探身存距，前手翻掌标出。</span></p><p><span>收拳换向。</span></p><p><span>x9。</span></p><p><span>双拳向左出掌伸平。</span></p><p><span>反向轮转上过头顶。</span></p><p><span>一次触底。</span></p><p><span>二次触底。</span></p><p><span>方拳收脚，气归中宫。</span></p><blockquote><p><span>“倾身、举弓、搭箭、拉弓、放箭”，这五步按先后顺序，一步步来，保持节奏，不可连做。</span></p><p><span>拉弓手的力点着意在食指第二指节，小臂并非平行于地面，而是稍稍向下倾斜，挺胸充肺，力集肩背，要用后背上部肩胛撑力，这样才能气定神闲，通体舒展。</span></p></blockquote><h3 id='第五部回头望足去心疾'><span>第五部：回头望足去心疾</span></h3><p><span>左开大步。</span></p><p><span>左手舀水，经腰圆转，相对贴身下插，伸平朝内。</span></p><p><span>右手提气，经面下按弓步，掌心朝外，上前推出。</span></p><p><span>回头望足，微视后脚脚跟。</span></p><p><span>前冲后覆，外旋翻掌。</span></p><p><span>收拳换向。</span></p><p><span>x9。</span></p><p><span>方拳收脚，气归中宫。</span></p><blockquote><p><span>这一部最后的伸展动作不容易协调，其实奥秘就是四个字：相对运动！</span></p><p><span>为便于描述，称向前的手为“按推手”，向后的手为“下插手”。</span></p><p><span>最后伸展的诀窍在于：下插手绝对位置不动！从腰间盘转至体侧以后，就等着按推手动作：前手“按”下弓步的同时身体迁移，此时下插手相对身体自然到位，前手“推”的同时后手直接运气伸展，确认步型“弓蹬”（前腿弓、后退蹬）即可。此动作伸展到位后，气脉极其通畅。</span></p></blockquote><h3 id='第六部五劳七伤向后瞧'><span>第六部：五劳七伤向后瞧</span></h3><p><span>叉手上提。</span></p><p><span>下按。</span></p><p><span>头引体转，体带头回。</span></p><p><span>先左后右，归正脊柱。</span></p><p><span>x9。</span></p><p><span>翻掌散手，方拳收回，气归中宫。</span></p><blockquote><p><span>这一部是治病的，要点在于：</span><strong><span>两眼似闭非闭，观想五脏六腑，致虚极，守静笃，气运病灶。</span></strong></p><p><img src="img/%E8%84%8F%E8%85%91%E5%9B%BE.jpg" style="zoom: 31.8%;" /><span> </span><img src="img/%E8%82%BE%E8%84%8F%E5%9B%BE.jpg" style="zoom:40%;" /></p></blockquote><h3 id='第七部凤凰展翅周身力'><span>第七部：凤凰展翅周身力</span></h3><p><span>左开大步。</span></p><p><span>双拳向左出掌伸平。</span></p><p><span>反向轮转上过头顶。</span></p><p><span>一次过顶。</span></p><p><span>二次过顶。</span></p><p><span>三次过顶。</span></p><p><span>顺势侧身，右手惯落而后劈，腰引左手三点地。</span></p><p><span>回手起身换方向。</span></p><p><span>x9。</span></p><p><span>双拳向左出掌伸平。</span></p><p><span>反向轮转上过头顶。</span></p><p><span>一次过顶。</span></p><p><span>一次触底。</span></p><p><span>方拳收脚，气归中宫。</span></p><blockquote><p><span>“凤凰三点头”的步法是</span></p><p><span>点头的要点是下腰，而不是弓背。后手像是被人反擒住向上扳，形成对拉杠杆，上下通臂。通臂的意义，在于视臂膀为一个，即“一条臂膀，两个拳头”，两臂相通，阴阳互济，在物理上就是动量守恒。</span></p><p><img src="img/%E5%87%A4%E5%87%B0%E4%B8%89%E7%82%B9%E5%A4%B4.jpg" style="zoom: 50%;" /><span> </span></p></blockquote><h3 id='第八部两足顿顿饮嗜消'><span>第八部：两足顿顿饮嗜消</span></h3><p><span>叉手上提。</span></p><p><span>下按。</span></p><p><span>并足叩齿。</span></p><p><span>提踵下振。1-2-345。</span></p><p><span>x9。</span></p><p><span>两脚开立。</span></p><h3 id='收功'><span>收功</span></h3><p><span>翻掌散手，指立对挤。</span></p><p><span>上提经面，分起两肩，经两胁缓缓落下，收功圆满。</span></p><p><span>张手分指，反复握拳，放松腿脚，原地跑跳，拍打折臂，放松自然。</span></p><p>&nbsp;</p><blockquote><p><strong><span>要点总结：</span></strong></p><ol start='' ><li><p><span>功理顺序：先通三焦，发动全身气机。</span></p><p><span>再按「</span><strong><span>肾</span></strong><span>水、</span><strong><span>脾</span></strong><span>土、</span><strong><span>肝</span></strong><span>木、</span><strong><span>肺</span></strong><span>金、</span><strong><span>心</span></strong><span>火」序锻炼脏腑。</span></p><p><span>肾为先天之本，先固肾腰。</span></p><p><span>脾为后天之本，再调脾肤。（肤指皮肤与肌肉之间的隔膜细胞组织）</span></p><p><span>继而肝肺，最后君主之官。</span></p><p><span>练后，再行扫除五劳七伤。</span></p><p><span>凤凰展翅，畅通全身经络与循环气血。</span></p><p><span>两足顿顿，消解饮食阻滞与不良嗜好。</span></p></li><li><p><strong><span>收功式一定要做</span></strong><span>，无论您练了哪部，休息前都要完成收功式。</span></p><p><span>不收功则散开元气不能归聚，就像庄稼成熟不收割，白白浪费成果。</span></p><p><span>所以必须收功。</span></p></li><li><p><strong><span>金刚功中握的拳为方拳</span></strong><span>，大拇指盖住四指的指甲。</span></p><p><img src="img/方拳.png" referrerpolicy="no-referrer"><span> </span></p></li><li><p><span>练习金刚功之前必须做充分的准备活动。</span></p><p><span>如活动膝盖、腰、手腕脚踝，抻筋、压腿等。</span></p><p><span>练功时要循序渐进，量力而行，避免扭伤。</span></p><p><span>涉及下蹲的动作膝盖不要超过脚尖。</span></p></li><li><p><strong><span>饭后一小时内不能练</span></strong><span>，最好两小时后再练。</span></p><p><span>下雨、大风、大雾、打雷或天气恶劣时不要在室外练习。</span></p></li><li><p><span>每部最少做5遍，最多不超过9遍。对称的动作不能只练一边，练完左右对称动作算一遍。</span></p></li><li><p><span>练功前要全身放松、排除杂念、心志专一、意守本体、安静自然。</span></p><p><span>练习时要自然呼吸，千万不要关注或配合呼吸。</span></p><p><span>千万不要关注体感、气感等，有气感很正常，但不能执着，要无视这些。</span></p><p><span>从心理上不要把它当功法练，而是当广播体操练，这样动作更自然，心思简单，效果反而更好。</span></p></li><li><p><strong><span>金刚功宜在早上太阳将出、未出时面对东方练习</span></strong><span>。</span></p><p><span>长寿功宜在晚上静时面对月亮练。</span></p><p><span>若受生活和工作的限制，也不强求。</span></p><p><span>要注意每套功都要从预备式起，练完后一定要收功。</span></p></li><li><p><span>从力度上讲，金刚功讲究内力、暗力。</span></p><p><span>整个用力过程，要有连绵不断的平等力和持续性，而不是外力、强力、僵力。</span></p><p><span>用自身七八成力，不要用全力，主要手用力。</span></p></li><li><p><span>初学时，动作不要求规范标准，一般的照动作做，不出大体就行。</span></p><p><span>随着体力和练功动作的熟练，逐步的达到标准化、规范化。</span></p><p><span>切忌操之过急。</span></p></li><li><p><strong><span>女性生理期、怀孕期间禁止练习。</span></strong></p><p><span>金刚功走血快，凡是身体上出现了出血症状都不要练，同时女性生理期是独有的排毒阶段，练功会影响自身排毒，而且生理期休息不会前功尽弃，生理期彻底结束后继续练习即可。</span></p></li><li><p><span>练功后如出现呕吐杂质、吐血、尿血、便血、泄泻、汗出如胶等现象时，精神正常或精力更加充沛，则属正常。如精神萎靡不振或疲惫乏力则要停练。检查动作是否符合要求，近日饮食起居是否失节。</span></p></li><li><p><span>习练金刚功多见下面几种现象：</span></p><ul><li><strong><span>嗜睡</span></strong><span>，这是因为精气神不够，练功后人体自我调节出现的现象，一般持续一到两周时间，因体质差异和练功勤快与否有差别。</span></li><li><strong><span>拉肚子</span></strong><span>，不同于生病拉肚子，排泄物粘粘糊糊带黑色或暗灰色。虽然拉肚子，但精神很好，持续时间不长。</span></li><li><strong><span>病情加重</span></strong><span>，感到病灶部位疼痛加剧，这是治病除根的关键时候，要继续练功攻克它不要怕，经过一段时间病症会减轻而至痊愈。</span></li></ul></li><li><p><span>青岛一癌症患者练金刚功，累了就歇，歇了又练，一天练到晚，每部不超 9 遍，一天练多次，一个月后胃癌竟然消失。</span></p></li></ol></blockquote><p>&nbsp;</p><h2 id='二八部长寿功月练·阴法）'><span>二、八部长寿功</span><small><span>（月练·阴法）</span></small></h2><blockquote><p><strong><span>窃吃昆仑长生酒</span></strong><span>，</span><strong><span>升降日月任督走</span></strong><span>。</span></p><p><strong><span>内转太极行八卦</span></strong><span>，</span><strong><span>大转逍遥乐无忧</span></strong><span>。</span></p><p><strong><span>大雁腾空降吉祥</span></strong><span>，</span><strong><span>浪里行舟漂海洋</span></strong><span>。</span></p><p><strong><span>白鹤踏波定神思</span></strong><span>，</span><strong><span>鱼沉海底寿命长</span></strong><span>。</span></p><p><small><span>（顺序：昆仑日月，太极八卦，回转逍遥。腾空浮海，踏波定神，沉入海底。）</span></small></p></blockquote><h3 id='第一部窃吃昆仑长生酒'><span>第一部：窃吃昆仑长生酒</span></h3><p><span>双手覆脐，左上右下。</span></p><p><span>舌搅齿内，观想病灶，至生津而咽下。</span></p><h3 id='第二部升降日月任督走'><span>第二部：升降日月任督走</span></h3><p><span>左开大步。双手内转一圈起手。</span></p><p><span>翻掌转立，成体前问手，向下向内滚动。内循环下降至会阴成马步，停一下。向上向外滚动，外循环上升至头顶成直膝，停一下。x1。</span></p><p><span>舌顶上颚，内循环下降，过颔落舌，至会阴成马步，停一下。外循环上升至头顶成直膝，停一下。x5。</span></p><p><span>双手内转一圈收手，覆脐收步，左上右下。</span></p><blockquote><p><span>小周天：内气在体内沿任督二脉循环一周。内气从下丹田出发，经会阴、肛门上脊椎大道，沿督脉通“三关”（尾闾、夹脊和玉枕），至头顶泥丸经两耳根后分道落下会至上颚，再由舌抵上颚接回导至任脉，沿胸腹正中下行，回到下丹田。</span></p><p><span>前任，后督，前下，后上。下蹲时双手向内向下，意在推动内气沿着体前任脉下行；立起时双手向外向上，意在推动内气沿着体后督脉上行。舌抵上颚，是为了接内气回来。这一趟，气从气海出发，走个小周天，再返回气海。气海在脐下三寸，气海就是下丹田。</span></p><p><img src="img/%E7%9D%A3%E8%84%89%E4%B8%89%E5%85%B3.jpg" style="zoom:20%;" /><img src="img/%E4%B8%89%E8%BD%A6%E5%8A%9B.jpg" style="zoom:26.2%;" /><img src="img/%E5%BF%83%E7%8C%BF%E5%9D%9A%E5%AE%9A%E8%BF%87%E4%B8%89%E5%85%B3.jpg" style="zoom: 21.1%;" /></p></blockquote><h3 id='第三部内转太极行八卦'><span>第三部：内转太极行八卦</span></h3><p><span>左开大步。双手内转一圈起手。</span></p><p><span>双手左上右下，由小及大，目随手至，顺时针画圈。</span></p><p><span>x6。</span></p><p><span>至左上以右手牵引经两乳之间向下，观前手手心而后外旋、扣后手手背而后起托。</span></p><p><span>至右上以左手牵引经两乳之间向下，观前手手心而后外旋、扣后手手背而后起托。</span></p><p><span>x6。</span></p><p><span>换式左手落下撩髯，随体圆转向后滑出，掌心向上。</span></p><p><span>右手落下转左弓步朝外朝前推，至极而复，掸手向内，向上引手。</span></p><p><span>后手内旋覆地，抄水而起，回至左上。</span></p><p><span>换式右手落下撩髯，随体圆转向后滑出，掌心向上。</span></p><p><span>左手落下转左弓步朝外朝前推，至极而复，掸手向内，向上引手。</span></p><p><span>后手内旋覆地，抄水而起，回至右上。</span></p><p><span>x6。</span></p><p><span>至右上以左手牵引经两乳之间向下，观手心而后外旋、扣手背而后起托。</span></p><p><span>至左上以右手牵引经两乳之间向下，观手心而后外旋、扣手背而后起托。</span></p><p><span>x6。</span></p><p><span>至右上双手换式落下，复回转太极，左上右下，由大及小，目随手至，顺时针画圈。</span></p><p><span>x6。</span></p><p><span>双手内转一圈收手，覆脐收步，左上右下。</span></p><blockquote><p><span>这一部中“抄水而起”这个动作，要慢慢地做，伸展筋骨，尤其舒服。</span></p></blockquote><h3 id='第四部大转逍遥乐无忧'><span>第四部：大转逍遥乐无忧</span></h3><p><span>左开大步。双手内转一圈打开，抱球托于腹中。</span></p><p><span>下段摆动，目视双手，左右摇晃，从小到大，遍数不限；快速摇晃几遍，过头顶从右往左快速转一圈；复目视双手，下段抱球，左右摇晃，从小到大，遍数不限；再快速摇晃几遍，过头顶从左往右快速转一圈。往复几次。</span></p><p><span>收球随收腿，收左腿点立定中宫，收右腿复出踏方位，绕中宫从右向左转身，双手抱球举过头顶。上段摆动，左后下摆，右后下摆，遍数不限。水平摆动，左转右转，左转右转，遍数不限。下段摆动，目视双手，左右摇晃，从小到大，遍数不限；快速摇晃几遍，过头顶从右往左快速转一圈；复目视双手，下段抱球，左右摇晃，从小到大，遍数不限；再快速摇晃几遍，过头顶从左往右快速转一圈。往复几次。</span></p><p><span>收球随收腿，收左腿点立定中宫，收右腿复出踏方位，绕中宫从右向左转身，双手抱球举过头顶。上段摆动，左后下摆，右后下摆，遍数不限。水平摆动，左转右转，左转右转，遍数不限。下段摆动，目视双手，左右摇晃，从小到大，遍数不限；快速摇晃几遍，过头顶从右往左快速转一圈；复目视双手，下段抱球，左右摇晃，从小到大，遍数不限；再快速摇晃几遍，过头顶从左往右快速转一圈。往复几次。</span></p><p><span>双手内转一圈收手，覆脐收步，左上右下。</span></p><blockquote><p><span>反身都是立定左脚动右脚。</span></p><p><span>反者道之动，抱球右上引，右腿左方收，立定转身抛球上，飞入天宫摇不停。</span></p></blockquote><h3 id='第五部大雁腾空降吉祥'><span>第五部：大雁腾空降吉祥</span></h3><p><span>双手内转一圈打开。</span></p><p><span>双手向前，拇指相挨，掌心向下，作雁尾形，左右轻摆凡四次。</span></p><p><span>两手分开。至下段，向内扑扇凡两次。至水平，展翅飞行凡两次。至上段，掌背相拍，落而复起凡三次。第三次向上时提一下脚跟，落下后开始起飞，双臂体侧伸平，左右向心滑翔凡四次。</span></p><p><span>振翅飞行，左脚向右后择地下降，右脚向右择地下降，左脚向右脚并拢，屈膝站稳起立。振翅飞行，右脚向左后择地下降，左脚向左择地下降，右脚向左脚并拢，屈膝站稳起立。往复四次。</span></p><p><span>振翅飞行，左脚向右后择地下降，右脚向右择地下降，左脚向右脚并拢，屈膝站稳起立。左脚向左迈一步，收右脚屈膝站稳起立。</span></p><p><span>振翅飞行，右脚向前，脚尖点地，向外画弧收回。振翅飞行，左脚向前，脚尖点地，向外画弧收回。往复四次。</span></p><p><span>振翅飞行，双手下落。至下段，向内扑扇凡两次。归雁尾，左右轻摆凡四次。</span></p><p><span>双手内转一圈收手，覆脐收步，左上右下。</span></p><h3 id='第六部浪里行舟漂海洋'><span>第六部：浪里行舟漂海洋</span></h3><p><span>双手内转一圈打开。</span></p><p><span>左脚向前一步，双手指尖朝下，作波浪状前后摆动，脚跟脚尖，随之起落。往复几次。</span></p><p><span>双手推至前方，换式交叉下捋，后经身前而起，翻掌使掌心朝上，向前摊手下落；复于身后起手，合归元气，推至前方，交叉下捋。往复多次。</span></p><p><span>摇橹下捋，双手复回身前，换式作波浪状前后摆动。往复多次，复回摇橹。</span></p><p><span>波浪回收，双手内转一圈收手，覆脐收步，左上右下。</span></p><blockquote><p><span>摇橹的动作忽忽荡荡，尤其舒服。</span></p></blockquote><h3 id='第七部白鹤踏波定神思'><span>第七部：白鹤踏波定神思</span></h3><p><span>双手内转一圈打开落向身后，左腿屈膝，右脚点地。双手从背部两胁上提，至肩部成鹤嘴状。右脚提起，双手经脑后上提过头顶。右脚尖向前点地，后腿屈膝进步落定，双手随之向前伸展下落，后脚向前跟提点地。换脚前进，往复几次。立足前后脚尖，转身反向继续。</span></p><p><span>落脚并腿，双手内转一圈收手，覆脐收步，左上右下。</span></p><blockquote><p><span>鹤嘴落后上步跟提，过肩上举同时提膝。</span></p></blockquote><h3 id='第八部鱼沉海底寿命长'><span>第八部：鱼沉海底寿命长</span></h3><p><span>双手内转一圈打开，左上右下，腹前上下叠放，指尖朝前，作鱼尾状摆动。</span></p><p><span>双手指尖斜对，分开体侧，缓慢摆动上升至胸前，再缓慢摆动下降至丹田。上浮下沉，如此往复。</span></p><p><span>最后一次降至丹田，双手再次于腹前上下叠放，指尖朝前，作鱼尾状摆动。</span></p><p><span>双手内转一圈收手，覆脐左上右下，收功圆满。</span></p></div></div>
+</body>
+</html>
